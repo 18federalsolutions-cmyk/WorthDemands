@@ -20,7 +20,4 @@ document.getElementById('year').textContent = new Date().getFullYear();
 const form = document.getElementById('contactForm');
 const status = document.getElementById('formStatus');
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  status.textContent = 'Thank you. The secure website form will be activated before launch. For now, email info@worthdemands.com.';
-});
+
