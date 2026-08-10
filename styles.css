@@ -11,3 +11,7 @@
 main {
   padding-bottom: 20px !important;
 }
+.contact-section {
+  padding-bottom: 40px !important;
+  min-height: auto !important;
+}
