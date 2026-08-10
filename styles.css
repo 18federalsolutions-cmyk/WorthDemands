@@ -2,8 +2,9 @@
 .brand-logo{display:block;width:auto;height:62px;max-width:360px;object-fit:contain;}
 .footer-brand img {
   display: block !important;
-  width: 300px !important;
-  max-width: 300px !important;
+  width: 400px !important;
+  max-width: 100% !important;
   height: auto !important;
   object-fit: contain;
+  filter: brightness(0) invert(1);
 }
