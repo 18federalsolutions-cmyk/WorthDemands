@@ -8,3 +8,6 @@
   object-fit: contain;
   filter: brightness(0) invert(1);
 }
+main {
+  padding-bottom: 20px !important;
+}
