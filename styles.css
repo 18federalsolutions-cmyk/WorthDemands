@@ -1541,3 +1541,333 @@ body{color:#292929;}
     transition-duration:.01ms !important;
   }
 }
+
+
+/* v36: mobile-only visual optimization
+   Desktop/tablet layout remains unchanged above 600px. */
+
+@media (max-width:600px){
+
+  /* Prevent any element from creating the right-side white strip / horizontal overflow */
+  html,
+  body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+  }
+
+  body{
+    line-height:1.55;
+  }
+
+  .container{
+    width:calc(100% - 28px);
+    max-width:none;
+  }
+
+  /* Header: true full-width black bar with tighter proportions */
+  .site-header{
+    width:100%;
+    max-width:100%;
+  }
+
+  .nav-wrap{
+    min-height:72px;
+    width:calc(100% - 24px);
+    gap:14px;
+  }
+
+  .brand-logo{
+    height:42px;
+    max-width:245px;
+  }
+
+  .nav-toggle{
+    font-size:25px;
+    padding:6px 0 6px 8px;
+    color:#fff;
+  }
+
+  .nav-links{
+    top:72px;
+    width:100%;
+    max-width:100%;
+  }
+
+  /* Hero: reduce dead space and stop headline from feeling oversized */
+  .hero{
+    padding:42px 0 52px;
+  }
+
+  .hero-grid{
+    gap:34px;
+  }
+
+  .hero-copy .eyebrow{
+    font-size:11px;
+    line-height:1.5;
+    letter-spacing:1.7px;
+    margin-bottom:16px;
+  }
+
+  .hero h1{
+    font-size:clamp(40px,12vw,48px);
+    line-height:1.02;
+    letter-spacing:-1.35px;
+  }
+
+  .hero-lead{
+    font-size:17px;
+    line-height:1.55;
+    margin:22px 0 0;
+  }
+
+  .hero-actions{
+    margin-top:24px;
+    gap:12px;
+    align-items:center;
+  }
+
+  .hero-actions .button{
+    min-width:150px;
+  }
+
+  .hero-actions .text-link{
+    font-size:15px;
+  }
+
+  .hero-card{
+    min-height:0;
+    margin-top:8px;
+  }
+
+  .doc-window{
+    width:100%;
+    max-width:100%;
+    transform:rotate(.6deg);
+  }
+
+  .doc-top{
+    height:50px;
+  }
+
+  .doc-body{
+    padding:24px 22px 28px;
+  }
+
+  .floating-note{
+    right:6px;
+    bottom:18px;
+    min-width:210px;
+    padding:13px 14px;
+  }
+
+  /* Section rhythm: less empty vertical space */
+  .section{
+    padding:52px 0;
+  }
+
+  #services{
+    padding-top:48px;
+    padding-bottom:54px;
+  }
+
+  .compact-heading{
+    margin-bottom:24px;
+  }
+
+  .compact-heading h2,
+  .center-heading h2,
+  .faq-heading h2,
+  .contact-copy h2{
+    font-size:clamp(34px,10vw,42px);
+    line-height:1.08;
+  }
+
+  .compact-heading p,
+  .center-heading>p:last-child{
+    font-size:15px;
+    line-height:1.55;
+  }
+
+  /* What's Included: tighter cards, balanced internal spacing */
+  #services .claim-list{
+    gap:12px !important;
+    margin-top:22px !important;
+  }
+
+  #services .claim-item{
+    padding:20px 20px !important;
+    min-height:116px !important;
+  }
+
+  #services .claim-item h3{
+    font-size:15px !important;
+    margin-bottom:7px !important;
+  }
+
+  #services .claim-item p{
+    font-size:14.5px !important;
+    line-height:1.45 !important;
+  }
+
+  /* Why Worth Demands: allow mobile wrapping; this removes the overflow */
+  #why{
+    padding-top:54px;
+    padding-bottom:54px;
+  }
+
+  #why .why-grid{
+    gap:26px;
+  }
+
+  #why .why-copy h2{
+    font-size:clamp(36px,10vw,43px) !important;
+    line-height:1.08;
+  }
+
+  #why .why-line-one{
+    white-space:normal !important;
+  }
+
+  #why .why-narrative p{
+    font-size:15.5px;
+    line-height:1.62;
+    margin-bottom:18px;
+  }
+
+  #why .why-narrative .why-closing{
+    font-size:16.5px;
+    line-height:1.5;
+    margin-top:22px;
+    padding-left:14px;
+  }
+
+  /* How It Works: compact the stacked mobile steps */
+  #process{
+    padding-top:52px;
+    padding-bottom:52px;
+  }
+
+  #process .center-heading{
+    margin-bottom:28px;
+  }
+
+  #process .process-grid{
+    grid-template-columns:1fr;
+    gap:22px;
+  }
+
+  #process .process-grid article{
+    padding:0;
+  }
+
+  #process .step{
+    width:44px;
+    height:44px;
+  }
+
+  #process .process-grid h3{
+    font-size:20px;
+    margin:14px 0 5px;
+  }
+
+  #process .process-grid p{
+    font-size:14.5px;
+    line-height:1.45;
+  }
+
+  #process .turnaround-note{
+    margin-top:24px;
+    padding:14px 16px;
+    font-size:13px;
+    line-height:1.5;
+  }
+
+  /* FAQ: reduce large blank feeling */
+  .faq-section{
+    padding-top:52px;
+    padding-bottom:52px;
+  }
+
+  .faq-heading{
+    margin-bottom:22px;
+  }
+
+  .faq-list summary{
+    padding:18px 40px 18px 0;
+    font-size:16px;
+    line-height:1.35;
+  }
+
+  .faq-list summary:after{
+    top:12px;
+    right:4px;
+  }
+
+  .faq-list details p{
+    font-size:14.5px;
+    line-height:1.55;
+    margin-bottom:18px;
+  }
+
+  /* Contact: tighter, more balanced mobile composition */
+  .contact-section{
+    padding:54px 0;
+  }
+
+  .contact-grid{
+    gap:30px;
+  }
+
+  .contact-copy h2{
+    font-size:clamp(38px,10.5vw,46px);
+    line-height:1.06;
+  }
+
+  .contact-email{
+    margin-top:28px;
+  }
+
+  .contact-email a{
+    font-size:21px;
+    overflow-wrap:anywhere;
+  }
+
+  .contact-form-wrap{
+    padding:22px 18px;
+  }
+
+  .contact-form-wrap h3{
+    font-size:16px !important;
+    margin-bottom:20px !important;
+  }
+
+  .contact-form label{
+    margin-bottom:13px;
+  }
+
+  .contact-form input,
+  .contact-form textarea{
+    padding:12px;
+  }
+
+  /* Footer mobile tightening */
+  .site-footer{
+    padding:38px 0 24px;
+  }
+
+  .footer-grid{
+    gap:20px;
+    padding-bottom:24px;
+  }
+
+  .footer-brand img{
+    width:280px;
+  }
+
+  .legal{
+    padding-top:18px;
+    gap:14px;
+  }
+}
