@@ -1039,3 +1039,19 @@ body{color:#292929;}
   line-height:1;
   transform:none;
 }
+
+
+/* v25: center turnaround proof point on mobile only */
+@media (max-width: 768px){
+  .trust-row{
+    justify-content:center !important;
+    text-align:center !important;
+    width:100%;
+  }
+
+  .trust-row span{
+    justify-content:center !important;
+    text-align:center !important;
+    width:100%;
+  }
+}
