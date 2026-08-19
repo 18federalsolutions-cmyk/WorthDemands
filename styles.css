@@ -1055,3 +1055,489 @@ body{color:#292929;}
     width:100%;
   }
 }
+
+
+/* v26: unnumbered Complete Claim items */
+.claim-item{
+  grid-template-columns:1fr !important;
+  grid-template-rows:auto auto !important;
+}
+.claim-item h3,
+.claim-item p{
+  grid-column:1 !important;
+}
+
+
+/* v28: working 2x2 Complete Claim card grid */
+#services .section-eyebrow{
+  margin:0 0 12px;
+  text-align:center;
+  font-size:0.78rem;
+  font-weight:700;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:#9a7637;
+}
+
+#services .claim-list{
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:22px !important;
+  margin-top:34px;
+}
+
+#services .claim-item{
+  min-height:175px;
+  padding:30px 32px !important;
+  border:1px solid rgba(41,41,41,0.12) !important;
+  border-top:3px solid #9a7637 !important;
+  border-left:1px solid rgba(41,41,41,0.12) !important;
+  background:#fff;
+  box-shadow:0 8px 24px rgba(0,0,0,0.04);
+  display:flex !important;
+  flex-direction:column;
+  justify-content:center;
+}
+
+#services .claim-item h3{
+  margin:0 0 10px !important;
+  font-size:1.4rem;
+  line-height:1.15;
+}
+
+#services .claim-item p{
+  margin:0 !important;
+  font-size:1rem;
+  line-height:1.5;
+}
+
+@media (max-width: 768px){
+  #services .claim-list{
+    grid-template-columns:1fr !important;
+    gap:16px !important;
+  }
+
+  #services .claim-item{
+    min-height:auto;
+    padding:24px !important;
+  }
+}
+
+/* v31 preview — typography refinements requested in review */
+
+/* What's Included card titles: all caps editorial sans, black */
+#services .claim-item h3{
+  font-family:"DM Sans",Arial,sans-serif;
+  text-transform:uppercase;
+  letter-spacing:1.35px;
+  font-size:13px;
+  line-height:1.35;
+  font-weight:700;
+  color:#292929;
+}
+
+/* Form heading: all caps editorial sans for contrast */
+.contact-form-wrap h3{
+  font-family:"DM Sans",Arial,sans-serif;
+  text-transform:uppercase;
+  letter-spacing:1.45px;
+  font-size:14px;
+  line-height:1.4;
+  font-weight:700;
+  color:#292929;
+  margin:0 0 22px;
+}
+
+/* Slightly stronger card copy spacing to support the uppercase headings */
+#services .claim-item p{
+  margin-top:10px;
+}
+
+/* Process refinement: clearer distinction between internal analysis and attorney review */
+.process-grid h3{
+  letter-spacing:-.2px;
+}
+
+@media(max-width:600px){
+  #services .claim-item h3,
+  .contact-form-wrap h3{
+    letter-spacing:1.15px;
+  }
+}
+
+
+/* v32: stronger uppercase titles + narrative Why Worth Demands section */
+
+#services .claim-item h3{
+  font-size:16.5px !important;
+  letter-spacing:1.05px !important;
+  line-height:1.3 !important;
+  font-weight:700 !important;
+  color:#292929 !important;
+}
+
+.contact-form-wrap h3{
+  font-size:18px !important;
+  letter-spacing:1.15px !important;
+  line-height:1.35 !important;
+  font-weight:700 !important;
+  color:#292929 !important;
+  margin:0 0 24px !important;
+}
+
+#why .why-grid{
+  grid-template-columns:.82fr 1.18fr;
+  gap:88px;
+  align-items:start;
+}
+
+#why .why-copy{
+  padding-top:4px;
+}
+
+#why .why-narrative{
+  max-width:680px;
+}
+
+#why .why-narrative p{
+  margin:0 0 22px;
+  color:#545252;
+  font-size:17px;
+  line-height:1.72;
+}
+
+#why .why-narrative .why-closing{
+  margin-top:30px;
+  margin-bottom:0;
+  color:#292929;
+  font-size:18px;
+  font-weight:700;
+  line-height:1.55;
+}
+
+@media(max-width:900px){
+  #why .why-grid{
+    grid-template-columns:1fr;
+    gap:34px;
+  }
+
+  #why .why-narrative{
+    max-width:none;
+  }
+}
+
+@media(max-width:600px){
+  #services .claim-item h3{
+    font-size:15.5px !important;
+  }
+
+  .contact-form-wrap h3{
+    font-size:17px !important;
+  }
+
+  #why .why-narrative p{
+    font-size:16px;
+  }
+
+  #why .why-narrative .why-closing{
+    font-size:17px;
+  }
+}
+
+
+/* v33: keep "Medical evidence first." on one line */
+#why .why-grid{
+  grid-template-columns:1fr 1fr;
+  gap:76px;
+}
+
+#why .why-copy h2{
+  font-size:44px;
+}
+
+#why .why-copy h2 br{
+  display:block;
+}
+
+#why .why-copy h2{
+  white-space:normal;
+}
+
+#why .why-copy h2{
+  max-width:none;
+}
+
+#why .why-copy h2::first-line{
+  white-space:nowrap;
+}
+
+@media(max-width:1100px){
+  #why .why-copy h2{
+    font-size:40px;
+  }
+}
+
+@media(max-width:900px){
+  #why .why-grid{
+    grid-template-columns:1fr;
+    gap:34px;
+  }
+
+  #why .why-copy h2{
+    font-size:42px;
+  }
+}
+
+
+#why .why-line-one{
+  white-space:nowrap;
+}
+
+
+/* v34: rebalance concise sections without adding clutter */
+
+/* What's Included: reduce card volume so concise copy feels intentional */
+#services .compact-heading{
+  margin-bottom:28px;
+}
+
+#services .claim-list{
+  max-width:900px !important;
+  gap:16px !important;
+  margin-top:26px !important;
+}
+
+#services .claim-item{
+  min-height:132px !important;
+  padding:24px 28px !important;
+  justify-content:flex-start !important;
+}
+
+#services .claim-item h3{
+  margin:0 0 8px !important;
+}
+
+#services .claim-item p{
+  margin:0 !important;
+  font-size:15px !important;
+  line-height:1.5 !important;
+  max-width:420px;
+}
+
+/* How It Works: slightly tighter overall vertical rhythm */
+#process .center-heading{
+  margin-bottom:34px;
+}
+
+#process .process-grid{
+  gap:18px;
+}
+
+#process .process-grid article{
+  padding:12px 10px 14px;
+}
+
+#process .process-grid h3{
+  margin:18px 0 7px;
+}
+
+#process .process-grid p{
+  margin:0;
+  font-size:13.5px;
+  line-height:1.5;
+  max-width:220px;
+}
+
+#process .turnaround-note{
+  margin-top:24px;
+}
+
+/* Make step connectors feel proportionate to the tighter cards */
+#process .process-grid article:not(:last-child):after{
+  top:41px;
+  width:40px;
+}
+
+/* Mobile: compact but still breathable */
+@media(max-width:768px){
+  #services .claim-list{
+    gap:14px !important;
+  }
+
+  #services .claim-item{
+    min-height:auto !important;
+    padding:22px 22px !important;
+  }
+
+  #process .process-grid article{
+    padding:10px 4px 14px;
+  }
+
+  #process .process-grid p{
+    max-width:none;
+  }
+}
+
+
+/* v35: subtle interactive polish across the site */
+
+/* 1) Vertically center What's Included card content */
+#services .claim-item{
+  justify-content:center !important;
+}
+
+/* 2) Card hover lift + stronger shadow */
+#services .claim-item{
+  transition:
+    transform .24s ease,
+    box-shadow .24s ease,
+    border-color .24s ease;
+  will-change:transform;
+}
+
+@media (hover:hover) and (pointer:fine){
+  #services .claim-item:hover{
+    transform:translateY(-5px);
+    box-shadow:0 14px 30px rgba(0,0,0,.075);
+    border-color:rgba(154,118,55,.42) !important;
+  }
+}
+
+/* 3) Button hover lift + subtle shadow */
+.button{
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    background-color .2s ease,
+    border-color .2s ease;
+}
+
+@media (hover:hover) and (pointer:fine){
+  .button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 18px rgba(0,0,0,.14);
+  }
+}
+
+/* 4) Navigation underline hover */
+.nav-links > a:not(.button){
+  position:relative;
+  transition:color .2s ease;
+}
+
+.nav-links > a:not(.button)::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-7px;
+  width:100%;
+  height:1px;
+  background:#9a7637;
+  transform:scaleX(0);
+  transform-origin:left center;
+  transition:transform .22s ease;
+}
+
+@media (hover:hover) and (pointer:fine){
+  .nav-links > a:not(.button):hover::after{
+    transform:scaleX(1);
+  }
+}
+
+/* 5) How It Works hover response */
+#process .process-grid article{
+  transition:transform .22s ease;
+}
+
+#process .step{
+  transition:
+    background-color .22s ease,
+    color .22s ease,
+    transform .22s ease,
+    box-shadow .22s ease;
+}
+
+@media (hover:hover) and (pointer:fine){
+  #process .process-grid article:hover{
+    transform:translateY(-3px);
+  }
+
+  #process .process-grid article:hover .step{
+    background:#f1e8d7;
+    color:#292929;
+    transform:scale(1.06);
+    box-shadow:0 5px 14px rgba(154,118,55,.12);
+  }
+}
+
+/* 6) FAQ hover/focus polish */
+.faq-list summary{
+  transition:
+    color .2s ease,
+    padding-left .2s ease;
+}
+
+@media (hover:hover) and (pointer:fine){
+  .faq-list summary:hover{
+    color:#9a7637;
+    padding-left:4px;
+  }
+}
+
+.faq-list summary:focus-visible{
+  outline:2px solid rgba(154,118,55,.45);
+  outline-offset:4px;
+}
+
+/* 7) Form-field focus refinement */
+.contact-form input,
+.contact-form textarea{
+  transition:
+    border-color .2s ease,
+    box-shadow .2s ease,
+    transform .2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+  transform:translateY(-1px);
+}
+
+/* 8) Why Worth Demands closing line gets a restrained accent */
+#why .why-narrative .why-closing{
+  position:relative;
+  padding-left:18px;
+}
+
+#why .why-narrative .why-closing::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:.28em;
+  bottom:.2em;
+  width:3px;
+  background:#9a7637;
+}
+
+/* 9) Very subtle hero document interaction on hover */
+.hero-card{
+  transition:transform .35s ease;
+}
+
+@media (hover:hover) and (pointer:fine){
+  .hero-card:hover{
+    transform:translateY(-3px);
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion:reduce){
+  *,
+  *::before,
+  *::after{
+    scroll-behavior:auto !important;
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+  }
+}
