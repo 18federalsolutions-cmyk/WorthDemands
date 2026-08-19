@@ -1018,3 +1018,24 @@ body{color:#292929;}
     gap:18px;
   }
 }
+
+
+/* v19: trust-row spacing cleanup only */
+.trust-row{
+  justify-content:center !important;
+  align-items:center;
+  gap:0 !important;
+}
+
+.trust-row span{
+  display:inline-flex;
+  align-items:center;
+}
+
+.trust-row span + span::before{
+  content:"•";
+  color:#9a7637;
+  margin:0 22px;
+  line-height:1;
+  transform:none;
+}
