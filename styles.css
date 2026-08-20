@@ -1871,3 +1871,333 @@ body{color:#292929;}
     gap:14px;
   }
 }
+
+/* v37 strategic positioning preview */
+.credibility-strip{display:flex;flex-wrap:wrap;align-items:center;gap:8px 0;margin-top:34px;padding-top:20px;border-top:1px solid rgba(41,41,41,.13);font-size:10.5px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;color:#545252}
+.credibility-strip span{display:inline-flex;align-items:center}
+.credibility-strip span:not(:first-child):before{content:"•";margin:0 15px;color:#c6c1b7}
+.deliverable-note{max-width:980px;margin:24px auto 0;text-align:center;font-size:13px;color:#545252;font-weight:600}
+.why-sample-link{display:inline-flex;margin-top:10px}
+.sample-section{background:#fff;border-top:1px solid #ebeae9;border-bottom:1px solid #ebeae9}
+.sample-grid{display:grid;grid-template-columns:1fr .85fr;gap:90px;align-items:center;max-width:1040px}
+.sample-copy h2{font-family:"Playfair Display",serif;color:#292929;font-size:clamp(36px,4.4vw,52px);line-height:1.08;margin:8px 0 18px}
+.sample-copy>p:not(.eyebrow){max-width:570px;color:#545252;font-size:16px;line-height:1.7}
+.sample-copy .sample-note{font-size:12px!important;color:#777!important;margin:18px 0 24px}
+.button-outline{background:transparent;color:#292929;border:1px solid #292929}
+.button-outline:hover{background:#292929;color:#fff}
+.sample-preview{position:relative;min-height:410px}
+.sample-page{position:absolute;width:280px;height:365px;background:#fff;border:1px solid #d9d7d2;box-shadow:0 18px 45px rgba(0,0,0,.09);padding:36px 30px}
+.sample-page-back{left:68px;top:12px;transform:rotate(5deg);background:#f7f6f3}
+.sample-page-front{left:20px;top:28px;display:flex;flex-direction:column}
+.sample-page-front small{font-size:9px;letter-spacing:1.8px;color:#777;margin-bottom:55px}
+.sample-page-front strong{font-family:"Playfair Display",serif;font-size:21px;line-height:1.15;color:#292929;margin-bottom:7px}
+.sample-page-front span{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:#888;margin-bottom:35px}
+.sample-page-front i{display:block;height:5px;background:#ebeae9;margin:6px 0;width:100%}
+.sample-page-front i.short{width:65%}
+.sample-page-front b{font-size:9px;letter-spacing:1.2px;color:#545252;margin:25px 0 7px}
+.contact-support{max-width:520px;color:#d7d5d0;line-height:1.7;margin:18px 0 18px}
+.contact-sample-link{display:inline-block;color:#fff;font-weight:700;font-size:13px;margin-bottom:32px;border-bottom:1px solid rgba(255,255,255,.4);padding-bottom:3px}
+@media(max-width:900px){.sample-grid{grid-template-columns:1fr;gap:35px}.sample-preview{min-height:380px;max-width:400px;width:100%}.credibility-strip{font-size:10px}.credibility-strip span:not(:first-child):before{margin:0 10px}}
+@media(max-width:600px){.credibility-strip{display:grid;gap:8px;margin-top:28px}.credibility-strip span:not(:first-child):before{display:none}.deliverable-note{text-align:left;margin-top:20px}.sample-section{padding:56px 0}.sample-preview{min-height:325px}.sample-page{width:230px;height:300px;padding:28px 24px}.sample-page-back{left:48px}.sample-page-front{left:8px}.sample-page-front small{margin-bottom:38px}.sample-page-front strong{font-size:18px}.sample-page-front span{margin-bottom:22px}}
+
+/* v38 — strategic refinement after attorney-positioning review */
+/* Hero: remove the forced proof strip and let the positioning breathe. */
+.hero-copy .credibility-strip{display:none!important}
+
+/* Why: sample request belongs with the positioning headline, not the explanatory copy. */
+#why .why-copy .why-sample-link{display:inline-flex;margin-top:24px;font-size:14px;font-weight:700}
+
+/* What's Included: richer editorial cards without turning the section into a sales grid. */
+#services .claim-list{gap:18px!important}
+#services .claim-item{
+  position:relative;
+  overflow:hidden;
+  border-top:7px solid #a9813f!important;
+  background:linear-gradient(135deg,#fff 0%,#fff 72%,#f8f3e9 100%)!important;
+  box-shadow:0 10px 28px rgba(41,41,41,.055)!important;
+  transition:transform .2s ease,box-shadow .2s ease!important;
+}
+#services .claim-item:after{
+  content:"";position:absolute;right:-26px;bottom:-34px;width:105px;height:105px;
+  border:1px solid rgba(169,129,63,.17);border-radius:50%;pointer-events:none;
+}
+#services .claim-item:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(41,41,41,.075)!important}
+
+/* Promote the editable-format sentence into a genuine operational reassurance. */
+#services .deliverable-note{
+  max-width:900px;margin:22px auto 0;padding:18px 24px;text-align:left;
+  background:#efe6d5;border-left:5px solid #a9813f;color:#403d39;
+  font-size:14px;line-height:1.55;font-weight:500;
+}
+#services .deliverable-note strong{
+  display:inline-block;margin-bottom:3px;text-transform:uppercase;letter-spacing:1.1px;
+  font-size:11px;color:#8c682d;
+}
+
+/* Sample request: keep the visual proof cue, but make clear access is by request. */
+.sample-copy .button-outline{margin-top:10px}
+
+@media(max-width:768px){
+  #services .claim-item{border-top-width:6px!important}
+  #services .deliverable-note{padding:17px 18px;margin-top:18px}
+  #why .why-copy .why-sample-link{margin-top:18px}
+}
+
+
+/* v39 — visual polish requested after v38 review */
+/* What's Included: keep the stronger gold structure, remove decorative circles. */
+#services .claim-item:after{
+  content:none!important;
+  display:none!important;
+}
+#services .claim-item{
+  background:#fff!important;
+}
+
+/* FAQ: use the same warm neutral field as What's Included for deliberate section rhythm. */
+#faq.faq-section{
+  background:#ebeae9!important;
+}
+
+/* Hero: tighten the gap below the sticky header so the opening composition fits more naturally in one viewport. */
+@media (min-width:901px){
+  .hero{
+    padding-top:58px!important;
+    padding-bottom:72px!important;
+  }
+}
+
+/* Why: the additional paragraph break is intentional for scanability. */
+#why .why-narrative p{
+  margin-top:0;
+}
+#why .why-narrative p + p{
+  margin-top:22px;
+}
+#why .why-narrative .why-closing{
+  margin-top:26px;
+}
+
+@media(max-width:600px){
+  #why .why-narrative p + p{
+    margin-top:16px;
+  }
+}
+
+/* v40: match FAQ background exactly to What's Included */
+.faq-section{
+  background:#f5f3ee;
+}
+
+/* v41: FAQ must match the What's Included section exactly. */
+#faq.faq-section{
+  background:#f5f3ee!important;
+}
+
+/* v42: contact form panel — warm charcoal instead of cool gray/black */
+.contact-form-wrap{
+  background:#3f3b36!important;
+  border:1px solid #6b6256!important;
+  border-top:4px solid #a9813f!important;
+  color:#fff!important;
+}
+.contact-form-wrap h3,
+.contact-form-wrap label{
+  color:#fff!important;
+}
+.contact-form-wrap .form-note{
+  color:#d9d3ca!important;
+}
+.contact-form-wrap .form-status{
+  color:#fff!important;
+}
+
+/* v43 — align hero document and attorney-ready callout */
+.doc-window{transform:none;}
+.doc-top strong{text-transform:uppercase;letter-spacing:1.1px;}
+@media(max-width:600px){.doc-window{transform:none;}}
+
+
+/* v44 — final content and hierarchy refinements */
+/* Make the audience immediately legible without competing with the hero headline. */
+.hero .hero-eyebrow{font-size:14px!important;letter-spacing:1.7px!important;margin-bottom:17px!important;color:#8f6b2e!important;}
+
+/* Process titles: typographic variation and concise hierarchy. */
+#process .process-grid h3{font-family:"DM Sans",Arial,sans-serif!important;font-size:14px!important;font-weight:700!important;letter-spacing:1px!important;}
+
+/* Deliverable callout: gold field is enough; remove the redundant left stripe. */
+#services .deliverable-note{border-left:0!important;}
+
+/* Why: let the two-line positioning statement carry the left column. */
+#why .why-grid{grid-template-columns:1.02fr .98fr!important;gap:72px!important;align-items:start!important;}
+#why .why-copy h2{font-size:clamp(42px,4.15vw,58px)!important;line-height:1.13!important;letter-spacing:-1.25px!important;}
+#why .why-line-one,#why .why-accent{white-space:nowrap!important;}
+#why .why-sample-link{display:none!important;}
+
+@media(max-width:1100px){
+  #why .why-copy h2{font-size:clamp(39px,4vw,49px)!important;}
+}
+@media(max-width:900px){
+  #why .why-grid{grid-template-columns:1fr!important;gap:36px!important;}
+  #why .why-copy h2{font-size:clamp(38px,7vw,48px)!important;}
+  #why .why-line-one,#why .why-accent{white-space:normal!important;}
+}
+@media(max-width:600px){
+  .hero .hero-eyebrow{font-size:12.5px!important;line-height:1.45!important;letter-spacing:1.35px!important;}
+  #process .process-grid h3{font-size:13.5px!important;}
+}
+
+/* v45 — stronger hierarchy + tighter service language */
+#process .process-grid h3{
+  font-size:15px!important;
+  font-weight:800!important;
+  letter-spacing:1.15px!important;
+  line-height:1.2!important;
+  margin:20px 0 8px!important;
+}
+#process .process-grid p{
+  font-size:13.5px!important;
+  line-height:1.48!important;
+  color:#68645f!important;
+  margin:0!important;
+  max-width:245px;
+}
+#services .claim-item h3{
+  font-size:16px!important;
+  font-weight:800!important;
+  letter-spacing:.65px!important;
+  line-height:1.2!important;
+  margin-bottom:11px!important;
+}
+#services .claim-item p{
+  font-size:14px!important;
+  line-height:1.45!important;
+  color:#5f5b56!important;
+  margin:0!important;
+}
+#services .deliverable-note{
+  max-width:900px!important;
+  margin:20px auto 0!important;
+  padding:15px 22px!important;
+  display:flex!important;
+  align-items:baseline!important;
+  gap:18px!important;
+  background:#efe6d5!important;
+  border:0!important;
+  color:#403d39!important;
+  text-align:left!important;
+  line-height:1.45!important;
+}
+#services .deliverable-note strong{
+  flex:0 0 auto;
+  margin:0!important;
+  text-transform:none!important;
+  letter-spacing:0!important;
+  font-size:14px!important;
+  color:#7f5e29!important;
+  font-weight:800!important;
+}
+#services .deliverable-note span{
+  font-size:13.5px!important;
+  font-weight:500!important;
+  color:#4d4944!important;
+}
+@media(max-width:768px){
+  #services .deliverable-note{display:block!important;padding:16px 18px!important;}
+  #services .deliverable-note strong{display:block!important;margin-bottom:5px!important;}
+  #process .process-grid p{max-width:none;}
+}
+
+
+/* v46 — final copy compression + hero viewport polish */
+@media (min-width:901px){
+  .hero{
+    padding-top:48px!important;
+    padding-bottom:68px!important;
+  }
+}
+#services .deliverable-note{
+  max-width:980px!important;
+  gap:14px!important;
+  padding-left:20px!important;
+  padding-right:20px!important;
+}
+@media (min-width:769px){
+  #services .deliverable-note span{white-space:nowrap!important;font-size:13px!important;}
+}
+#why .why-narrative .why-closing{
+  font-size:17px!important;
+  line-height:1.35!important;
+  font-weight:800!important;
+}
+
+/* v47 — alignment + section-label hierarchy polish */
+/* Align the delivery strip exactly with the 2x2 card grid. */
+#services .deliverable-note{
+  max-width:none!important;
+  width:100%!important;
+  margin-left:0!important;
+  margin-right:0!important;
+  gap:24px!important;
+}
+#services .deliverable-note strong{margin-right:4px!important;}
+
+/* Closing statement stands on typography alone. */
+#why .why-narrative .why-closing{
+  padding-left:0!important;
+  position:static!important;
+}
+#why .why-narrative .why-closing::before{display:none!important;content:none!important;}
+
+/* Make section eyebrows as immediately legible as the hero audience label. */
+#process .eyebrow,
+#services .section-eyebrow,
+#why .why-eyebrow,
+#sample .eyebrow,
+.faq-section .eyebrow,
+.faq-heading .eyebrow{
+  font-size:14px!important;
+  letter-spacing:1.7px!important;
+  line-height:1.4!important;
+}
+
+/* v48 — final delivery-strip alignment */
+#services .deliverable-note{
+  width:auto!important;
+  max-width:980px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+
+/* v49 — exact delivery-strip alignment with service cards */
+#services .deliverable-note{
+  box-sizing:border-box!important;
+  width:100%!important;
+  max-width:900px!important; /* exactly matches #services .claim-list */
+  margin:20px auto 0!important;
+  padding:15px 28px!important; /* matches card horizontal padding */
+  gap:28px!important;
+}
+
+
+/* v50 — final mobile QA safeguards */
+@media(max-width:600px){
+  #services .deliverable-note{
+    width:100%!important;
+    max-width:100%!important;
+    padding:16px 18px!important;
+    display:block!important;
+  }
+  #services .deliverable-note strong{
+    display:block!important;
+    margin:0 0 6px!important;
+  }
+  #services .deliverable-note span{
+    white-space:normal!important;
+    font-size:13.5px!important;
+  }
+  #services .claim-list{width:100%!important;}
+  #why .why-line-one,#why .why-accent{white-space:normal!important;}
+  .sample-grid,.contact-grid{grid-template-columns:1fr!important;}
+  .contact-form input,.contact-form textarea{max-width:100%!important;}
+}
